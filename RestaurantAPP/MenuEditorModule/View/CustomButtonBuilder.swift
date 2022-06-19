@@ -75,6 +75,7 @@ final class CustomButtonBuilder: UIButton {
             static let borderWidth: CGFloat = 0.5
             static let cornerRadius: CGFloat = 10
             static let height = 24
+            static let contentEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
         }
         
         enum AddIngridientButton {
@@ -169,6 +170,8 @@ final class CustomButtonBuilder: UIButton {
             self.layer.borderColor = Consts.IngridientButton.borderColor
             self.layer.borderWidth = Consts.IngridientButton.borderWidth
             self.layer.cornerRadius = Consts.IngridientButton.cornerRadius
+            self.contentHorizontalAlignment = .left
+            self.contentEdgeInsets = Consts.IngridientButton.contentEdgeInsets
             self.snp.makeConstraints { make in make.height.equalTo(Consts.IngridientButton.height)}
         case .addIngridient:
             let buttonAttributedTitle = NSMutableAttributedString(string: title, attributes: Consts.AddIngridientButton.buttonAttributes)

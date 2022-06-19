@@ -186,7 +186,6 @@ final class MenuEditorViewController: UIViewController {
     
     //MARK: lifecycle helpers
     private func configureView() {
-        self.view.backgroundColor = .systemBackground
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
     
@@ -225,9 +224,6 @@ final class MenuEditorViewController: UIViewController {
     }
     
     private func configureSubviews() {
-        self.view.backgroundColor = .green
-        contentView.backgroundColor = .lightGray
-        
         categoryLabel.text = Consts.CategoryLabel.text
         categoryLabel.font = Consts.CategoryLabel.font
         categoryScrollView.showsHorizontalScrollIndicator = false

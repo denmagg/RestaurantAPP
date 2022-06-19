@@ -20,13 +20,12 @@ final class MenuViewController: UIViewController {
     }
     
     private func configureView() {
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .systemBackground
     }
     
     private func setupLeftViewController() {
         addChild(leftViewController)
         view.addSubview(leftViewController.view)
-        leftViewController.view.backgroundColor = .green
         leftViewController.didMove(toParent: self)
         
         leftViewController.view.translatesAutoresizingMaskIntoConstraints = false
