@@ -8,10 +8,10 @@
 import UIKit
 import SnapKit
 
-class MenuEditorViewController: UIViewController {
+final class MenuEditorViewController: UIViewController {
     
     //MARK: Consts
-    enum Consts {
+    private enum Consts {
         enum CategoryScrollView {
             static let topInset: CGFloat = -15
             static let height: CGFloat = 24
@@ -147,7 +147,7 @@ class MenuEditorViewController: UIViewController {
         CustomButtonBuilder(title: "Напитки", style: .plainCategory, isSelected: false),
         CustomButtonBuilder(title: "Новый раздел", style: .addCategory)
     ]
-    @objc private let deleteCategoryButton = CustomButtonBuilder(title: Consts.DeleteCategoryButton.title, style: .deleteCategory)
+    private let deleteCategoryButton = CustomButtonBuilder(title: Consts.DeleteCategoryButton.title, style: .deleteCategory)
     private let ingridientButtonsArray: [CustomButtonBuilder] = [
         CustomButtonBuilder(title: "Зеленый салат", style: .ingridient),
         CustomButtonBuilder(title: "Помидоры", style: .ingridient),
@@ -388,28 +388,28 @@ class MenuEditorViewController: UIViewController {
     }
     
     //MARK: Methods
-    @objc func categoryButtonTapped() {
+    @objc private func categoryButtonTapped() {
         print("category button was tapped")
     }
-    @objc func addCategoryButtonTapped() {
+    @objc private func addCategoryButtonTapped() {
         print("add category button was tapped")
     }
-    @objc func deleteCategoryButtonTapped() {
+    @objc private func deleteCategoryButtonTapped() {
         print("delete category button was tapped")
     }
-    @objc func ingridientButtonTapped() {
+    @objc private func ingridientButtonTapped() {
         print("ingridient button was tapped")
     }
-    @objc func addIngridientButtonTapped() {
+    @objc private func addIngridientButtonTapped() {
         print("add ingridient button was tapped")
     }
-    @objc func loadImageButtonTapped() {
+    @objc private func loadImageButtonTapped() {
         print("load image button was tapped")
     }
-    @objc func addMealButtonTapped() {
+    @objc private func addMealButtonTapped() {
         print("add meal button was tapped")
     }
-    @objc func hideKeyboard() {
+    @objc private func hideKeyboard() {
         self.view.endEditing(true)
     }
     

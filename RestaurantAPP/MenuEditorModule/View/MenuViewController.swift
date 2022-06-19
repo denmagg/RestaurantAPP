@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MenuViewController: UIViewController {
+final class MenuViewController: UIViewController {
     
     private let leftViewController = MenuEditorViewController()
 

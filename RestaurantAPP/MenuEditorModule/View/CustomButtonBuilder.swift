@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CustomButtonBuilder: UIButton {
+final class CustomButtonBuilder: UIButton {
     
     enum CustomButtonStyle {
         case selectedCategory
@@ -21,7 +21,7 @@ class CustomButtonBuilder: UIButton {
         case addMeal
     }
     
-    enum Consts {
+    private enum Consts {
         enum CategoryButton {
             static let selectedButtonAttributes: [NSAttributedString.Key : Any] = [
                 .font: UIFont(name: "roboto-regular", size: 11)!,
