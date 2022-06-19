@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //передали ему сцену
         window?.windowScene = windowScene
         
-        window?.rootViewController = MenuEditorViewController()
+        window?.rootViewController = MenuViewController()
         window?.makeKeyAndVisible()
     }
 
